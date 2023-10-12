@@ -1,0 +1,40 @@
+code = input("Please input zip code or area code: ")
+if code.isnumeric() != True:
+    print("Please only input numbers")
+location = input("Please input city or state: ")
+if location.isalpha() != True: #or location.isspace() != True:
+    print("Please only input letters & spaces")
+location = location.title()
+location = location.swapcase()
+
+def password(areacode, location):
+    for num in areacode:
+        if num == "1":
+            print("~1@",end='',flush=True)
+        elif num == "2":
+            print("!2#",end='',flush=True)
+        elif num == "3":
+            print("@3$",end='',flush=True)
+        elif num == "4":
+            print("#4%",end='',flush=True)
+        elif num == "5":
+            print("$5^",end='',flush=True)
+        elif num == "6":
+            print("%6&",end='',flush=True)
+        elif num == "7":
+            print("^7*",end='',flush=True)
+        elif num == "8":
+            print("&8(",end='',flush=True)
+        elif num == "9":
+            print("*9)",end='',flush=True)
+        elif num == "0":
+            print("(0_",end='',flush=True)
+        else:
+            print("Invalid Input")
+    for ch in location:
+        print(ch,end='',flush=True)
+        if ch == " ":
+            print("_",end='',flush=True)
+            
+password(code, location)
+    
