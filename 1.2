@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+
+import random
+    
+def password():
+    while True:
+            
+        rand = random.randint(0,2)
+        print(rand)
+
+        code = input("\nPlease input zip code or area code: ")
+        if code.isnumeric() != True:
+            print("Please only input numbers")
+        location = input("Please input city or state: ")
+        location = location.lower()
+        location = location.replace(" ", "")
+        location = location.replace("e", "&")
+        location = location.replace("t", "+")
+        location = location.replace("a", "@")
+        location = location.replace("o", "0")
+        location = location.replace("i", "1")
+        location = location.replace("n", "<")
+        location = location.replace("s", ">")
+        location = location.replace("r", "}")
+        location = location.replace("h", "{")
+        location = location.replace("l", "ll")
+        if location.isalpha == True:
+            print("Please only input letters & spaces")
+    
+        if rand == "0":
+            location = location.title()
+            location = location.swapcase()
+        elif rand == "1":
+            location = location.upper()
+        else:
+            location = location.lower()
+    
+        if rand == "0":
+            for num in code:
+                if num == "1":
+                    print("~1@",end='',flush=True)
+                elif num == "2":
+                    print("!2#",end='',flush=True)
+                elif num == "3":
+                    print("@3$",end='',flush=True)
+                elif num == "4":
+                    print("#4%",end='',flush=True)
+                elif num == "5":
+                    print("$5^",end='',flush=True)
+                elif num == "6":
+                    print("%6&",end='',flush=True)
+                elif num == "7":
+                    print("^7*",end='',flush=True)
+                elif num == "8":
+                    print("&8(",end='',flush=True)
+                elif num == "9":
+                    print("*9)",end='',flush=True)
+                elif num == "0":
+                    print("(0_",end='',flush=True)
+                else:
+                    print("Invalid Input")
+                
+            for ch in location:
+                print(ch,end='',flush=True)
+                
+        elif rand == "1":
+            for num in code:
+                if num == "1":
+                    print("!1!",end='',flush=True)
+                elif num == "2":
+                    print("@2@",end='',flush=True)
+                elif num == "3":
+                    print("#3#",end='',flush=True)
+                elif num == "4":
+                    print("$4$",end='',flush=True)
+                elif num == "5":
+                    print("%5%",end='',flush=True)
+                elif num == "6":
+                    print("^6^",end='',flush=True)
+                elif num == "7":
+                    print("&7&",end='',flush=True)
+                elif num == "8":
+                    print("*8*",end='',flush=True)
+                elif num == "9":
+                    print("(9(",end='',flush=True)
+                elif num == "0":
+                    print(")0)",end='',flush=True)
+                else:
+                    print("Invalid Input")
+                
+            for ch in location:
+                print(ch,end='',flush=True)
+                
+        else:
+            for num in code:
+                if num == "1":
+                    print("@1~",end='',flush=True)
+                elif num == "2":
+                    print("#2!",end='',flush=True)
+                elif num == "3":
+                    print("$3@",end='',flush=True)
+                elif num == "4":
+                    print("%4#",end='',flush=True)
+                elif num == "5":
+                    print("^5$",end='',flush=True)
+                elif num == "6":
+                    print("&6%",end='',flush=True)
+                elif num == "7":
+                    print("*7^",end='',flush=True)
+                elif num == "8":
+                    print("(8&",end='',flush=True)
+                elif num == "9":
+                    print(")9*",end='',flush=True)
+                elif num == "0":
+                    print("_0(",end='',flush=True)
+                else:
+                    print("Invalid Input")
+                
+            for ch in location:
+                print(ch,end='',flush=True)
+            
+password()
